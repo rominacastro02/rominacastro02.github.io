@@ -1,70 +1,147 @@
-*{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* General Styles */
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el width y height */
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fuente global */
 }
 
-.fondo{
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-primavera-dibujado-flores_23-2148833619.jpg);
-    min-height: 25vh;
+/* Header and Navigation */
+header {
+    background-color: #da0379;
+    padding: 10px;
 }
 
-#sobreMi h1{
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    margin: 180px
-
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
 }
 
-img{
-    width: 70%;
-    margin: 50px;
+nav ul li {
+    margin: 0 15px;
 }
 
-h1.fondo{
-    margin:200px
-}
-
-h2{
-    text-align: center;
-}
-
-#sobreMi h1{
-    text-align: center;
-}
-
-p{
-    text-align: center;
-    margin: 80px;
-}
-
-nav{
-    background-color:#da0379;
-}
-
-nav, ul, li{
-    list-style:none;
-}
-
-a{
+nav ul li a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Sections */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.fondo {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-primavera-dibujado-flores_23-2148833619.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+}
+
+.destacados1, .destacados2 {
+    padding: 20px;
 }
 
 .destacados1 {
     background-color: #ffafdb;
 }
 
-.destacados2{
-    background-color:#cf4070;
+.destacados2 {
+    background-color: #cf4070;
 }
 
-#footerS{
-    background-color: #b10f80;  
+#footerS {
+    background-color: #b10f80;
+    padding: 10px;
+    text-align: center; /* Alinea el texto al centro en el footer */
 }
 
-#footerS h3{
+#footerS h3 {
     color: white;
     font-weight: 700;
 }
 
-footer{
-    text-align: center;
+/* Image Styles */
+img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    display: block; /* Evita el espacio en blanco debajo de las imágenes */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .fondo {
+        min-height: 20vh;
+        padding: 10px;
+    }
+
+    p {
+        margin: 20px;
+    }
+
+    #contacto form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contacto input, #contacto textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .fondo {
+        min-height: 15vh;
+        padding: 5px;
+    }
+
+    p {
+        margin: 10px;
+    }
+
+    #contacto input[type="submit"] {
+        width: 100%;
+    }
 }
